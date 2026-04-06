@@ -55,24 +55,24 @@
       display: inline-block; background: var(--primary-dark); color: var(--white);
       font-family: 'Poppins', system-ui, sans-serif; font-weight: 500; font-size: 16px;
       padding: 14px 32px; border-radius: var(--btn-radius); border: 1px solid var(--primary-dark);
-      text-decoration: none; cursor: pointer; transition: opacity 0.25s;
+      text-decoration: none; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.25s;
     }
-    .btn-primary:hover { opacity: 0.88; }
+    .btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(57,46,38,0.45), 0 4px 16px rgba(57,46,38,0.25); }
     .btn-hero {
       display: inline-block; background: var(--white); color: var(--primary-dark);
       font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; font-size: 17px;
       padding: 16px 40px; border-radius: var(--btn-radius); border: none;
-      text-decoration: none; cursor: pointer; transition: background 0.25s, transform 0.25s;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      text-decoration: none; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.25s;
     }
-    .btn-hero:hover { background: var(--warm-sand); transform: translateY(-2px); }
+    .btn-hero:hover { background: var(--warm-sand); transform: scale(1.06); box-shadow: 0 0 28px rgba(255,255,255,0.5), 0 8px 24px rgba(0,0,0,0.25); }
     .btn-outline {
       display: inline-block; background: transparent; color: var(--primary-dark);
       font-family: 'Poppins', system-ui, sans-serif; font-weight: 500; font-size: 16px;
       padding: 14px 32px; border-radius: var(--btn-radius); border: 1px solid var(--primary-dark);
-      text-decoration: none; cursor: pointer; transition: background 0.25s, color 0.25s;
+      text-decoration: none; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.25s, color 0.25s;
     }
-    .btn-outline:hover { background: var(--primary-dark); color: var(--white); }
+    .btn-outline:hover { background: var(--primary-dark); color: var(--white); transform: scale(1.05); box-shadow: 0 0 20px rgba(57,46,38,0.35), 0 4px 16px rgba(57,46,38,0.2); }
 
     h1 { font-weight: 400; font-size: clamp(40px, 6vw, 70px); line-height: 1.1; }
     h2 { font-weight: 400; font-size: clamp(32px, 4vw, 50px); line-height: 1.1; }
@@ -100,14 +100,15 @@
       font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; font-size: 15px;
       padding: 10px 22px; border-radius: 10px; border: none; text-decoration: none;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.1);
-      transition: opacity 0.25s; cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;
     }
-    .nav-cta:hover { opacity: 0.88; }
+    .nav-cta:hover { transform: scale(1.05); box-shadow: 0 0 18px rgba(57,46,38,0.4), 0 4px 16px rgba(57,46,38,0.2); }
 
     /* ── HERO ── */
     .hero {
       position: relative; min-height: 100vh; display: flex; align-items: center;
-      background: url('images/anu-outside-2.jpg') center/cover no-repeat;
+      background: url('images/anu-emface.jpg') center/cover no-repeat;
       overflow: hidden;
     }
     .hero::before {
@@ -132,7 +133,7 @@
     /* ── OFFER ── */
     .offer { background: var(--cream); padding: 100px 0; }
     .offer-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+      display: grid; grid-template-columns: 3fr 2fr; gap: 64px; align-items: center;
     }
     .offer-card {
       background: var(--white); border-radius: var(--card-radius); padding: 48px;
@@ -166,27 +167,40 @@
     .checkmarks li i { color: var(--sage-green); margin-top: 3px; }
 
     /* ── EVENT DETAILS ── */
-    .event { background: var(--white); padding: 100px 0; }
+    .event {
+      position: relative; padding: 100px 0;
+      background: url('images/anu-outside-2.jpg') center/cover no-repeat fixed;
+    }
+    .event::before {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(0,0,0,0.35);
+    }
+    .event .container { position: relative; z-index: 2; }
+    .event .eyebrow { color: rgba(255,255,255,0.7); }
+    .event .eyebrow::before { background: var(--warm-taupe); }
+    .event h2 { color: var(--white); }
     .event-grid {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
       margin-top: 48px;
     }
     .event-card {
-      background: var(--cream); border-radius: var(--card-radius); padding: 36px 28px;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2); border-radius: var(--card-radius); padding: 36px 28px;
       text-align: center; transition: transform 0.3s, box-shadow 0.3s;
     }
     .event-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 32px rgba(57,46,38,0.1);
+      background: rgba(255,255,255,0.18);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
     }
     .event-card i {
       width: 56px; height: 56px; border-radius: 50%;
-      background: var(--warm-sand); color: var(--primary-dark);
+      background: rgba(255,255,255,0.2); color: var(--white);
       display: inline-flex; align-items: center; justify-content: center;
       font-size: 22px; margin-bottom: 20px;
     }
-    .event-card h3 { font-size: 18px; margin-bottom: 8px; }
-    .event-card p { color: var(--muted-brown); font-size: 15px; line-height: 1.5; }
+    .event-card h3 { font-size: 18px; margin-bottom: 8px; color: var(--white); }
+    .event-card p { color: rgba(255,255,255,0.85); font-size: 15px; line-height: 1.5; }
 
     /* ── SERVICES ── */
     .services { background: var(--warm-sand); padding: 100px 0; }
@@ -233,7 +247,7 @@
     /* ── RSVP FORM ── */
     .rsvp { background: var(--white); padding: 100px 0; }
     .rsvp-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end;
     }
     .rsvp-left h2 { margin-bottom: 16px; }
     .rsvp-left > p { color: var(--muted-brown); margin-bottom: 32px; line-height: 1.7; }
@@ -258,9 +272,9 @@
       width: 100%; padding: 16px; background: var(--primary-dark); color: var(--white);
       font-family: 'Poppins', system-ui, sans-serif; font-weight: 500; font-size: 16px;
       border: none; border-radius: var(--btn-radius); cursor: pointer;
-      transition: opacity 0.25s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.25s;
     }
-    .form-submit:hover { opacity: 0.88; }
+    .form-submit:hover.form-submit:hover { transform: scale(1.03); box-shadow: 0 0 20px rgba(57,46,38,0.4), 0 4px 16px rgba(57,46,38,0.2); }
     .spots-counter {
       display: flex; align-items: center; gap: 12px;
       background: var(--cream); border-radius: var(--card-radius); padding: 20px 24px;
@@ -295,9 +309,15 @@
 
     /* ── URGENCY FOOTER ── */
     .urgency {
-      background: linear-gradient(135deg, var(--dark-espresso) 0%, #5A4D40 100%);
+      position: relative;
+      background: url('images/anu-spa.jpg') center/cover no-repeat fixed;
       padding: 80px 0; text-align: center; color: var(--white);
     }
+    .urgency::before {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(0,0,0,0.35);
+    }
+    .urgency .container { position: relative; z-index: 2; }
     .urgency .eyebrow { color: rgba(255,255,255,0.6); }
     .urgency .eyebrow::before { background: var(--warm-taupe); }
     .urgency h2 { color: var(--white); margin-bottom: 16px; }
@@ -306,7 +326,8 @@
       display: flex; justify-content: center; gap: 24px; margin-bottom: 40px;
     }
     .countdown-item {
-      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: var(--card-radius); padding: 20px 28px; min-width: 100px;
     }
     .countdown-item .num { font-size: 36px; font-weight: 600; display: block; line-height: 1; }
@@ -316,9 +337,9 @@
       display: inline-block; background: var(--warm-sand); color: var(--primary-dark);
       font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; font-size: 16px;
       padding: 16px 36px; border-radius: var(--btn-radius); text-decoration: none;
-      transition: background 0.25s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.25s;
     }
-    .btn-urgency:hover { background: var(--cream); }
+    .btn-urgency:hover.btn-urgency:hover { background: var(--cream); transform: scale(1.06); box-shadow: 0 0 24px rgba(227,217,206,0.5), 0 8px 24px rgba(0,0,0,0.2); }
     .urgency-note {
       font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 12px;
     }
@@ -369,7 +390,7 @@
       <div class="hero-badges">
         <div class="hero-badge"><i class="fa-solid fa-calendar"></i> April 21</div>
         <div class="hero-badge"><i class="fa-solid fa-clock"></i> 4:00 PM</div>
-        <div class="hero-badge"><i class="fa-solid fa-gift"></i> Free assessment</div>
+        <div class="hero-badge"><i class="fa-solid fa-gift"></i> Raffle prizes</div>
       </div>
     </div>
   </div>
@@ -380,42 +401,45 @@
   <div class="container">
     <div class="offer-grid">
       <div class="offer-card">
-        <div class="eyebrow">Exclusive Grand Opening Offer</div>
-        <h2>Complimentary integrated assessment</h2>
-        <p>RSVP to the grand opening and receive a complimentary Face + Mind + Body assessment — a personalized evaluation across all three pillars of the ANU approach. Experience firsthand how integrated care delivers better outcomes than any single treatment alone.</p>
+        <div class="eyebrow">Grand Opening Raffle</div>
+        <h2>Attend. Enter. Win.</h2>
+        <p>Join us at the Grand Opening and get your raffle ticket just for showing up. Book a consultation at the event and receive a second ticket — doubling your chances to win.</p>
         <div class="offer-pillars">
           <div class="pillar">
-            <i class="fa-solid fa-spa"></i>
-            <span>Face</span>
+            <i class="fa-solid fa-ticket"></i>
+            <span>Attend = 1 Ticket</span>
           </div>
           <div class="pillar">
-            <i class="fa-solid fa-brain"></i>
-            <span>Mind</span>
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book = 1 Ticket</span>
           </div>
-          <div class="pillar">
-            <i class="fa-solid fa-heart-pulse"></i>
-            <span>Body</span>
-          </div>
+          
         </div>
         <div class="offer-highlight">
-          <div class="number">25</div>
           <div>
-            <p><strong style="color:#fff;font-weight:600;">Limited to the first 25 RSVPs</strong></p>
-            <p>Spots are filling fast — don't miss your chance.</p>
+            <p><strong style="color:#fff;font-weight:600;"><i class="fa-solid fa-trophy" style="margin-right:8px;"></i>Grand Prize</strong></p>
+            <p>Choice of RF Microneedling package (3 sessions) or Exomind (6 sessions)</p>
           </div>
         </div>
       </div>
       <div class="offer-right">
-        <div class="eyebrow">What You'll Receive</div>
-        <h3 style="margin-bottom:16px;">Your integrated assessment includes</h3>
+        <div class="eyebrow">What You Could Win</div>
+        <h3 style="margin-bottom:16px;">Raffle Prizes</h3>
         <ul class="checkmarks">
-          <li><i class="fa-solid fa-check"></i> Aesthetic skin and face analysis</li>
-          <li><i class="fa-solid fa-check"></i> Mental wellness and stress screening</li>
-          <li><i class="fa-solid fa-check"></i> Hormonal and metabolic health overview</li>
-          <li><i class="fa-solid fa-check"></i> Personalized treatment roadmap</li>
-          <li><i class="fa-solid fa-check"></i> One-on-one time with the ANU clinical team</li>
+          <li style="flex-direction:column; align-items:flex-start; gap:4px;">
+            <span style="display:flex; align-items:center; gap:12px;"><i class="fa-solid fa-trophy"></i> <strong>Grand Prize</strong></span>
+            <span style="padding-left:28px; color:var(--muted-brown);">RF Microneedling package (3 sessions)<br>or Exomind (6 sessions)</span>
+          </li>
+          <li><i class="fa-solid fa-syringe"></i> Two free IVs (choice of IV)</li>
+          <li><i class="fa-solid fa-gift"></i> Two $150 service credits</li>
         </ul>
-        <a href="#rsvp" class="btn-primary" style="margin-top:8px;">Claim your assessment</a>
+        <div class="offer-highlight" style="margin-top:28px; text-align:left; background:linear-gradient(135deg, var(--primary-dark), var(--medium-brown));">
+          <div>
+            <p><strong style="color:#fff;font-weight:600;"><i class="fa-solid fa-star" style="margin-right:8px;"></i>Event-Day Bonus</strong></p>
+            <p style="color:var(--warm-sand); font-size:15px;">Book a treatment plan at the event and your $150 consultation fee is applied toward treatment — plus receive a $50 Botox credit on your account.</p>
+          </div>
+        </div>
+        <a href="#rsvp" class="btn-primary" style="margin-top:24px;">RSVP Now</a>
       </div>
     </div>
   </div>
@@ -447,7 +471,7 @@
       <div class="event-card">
         <i class="fa-solid fa-phone"></i>
         <h3>Phone</h3>
-        <p>(270) 555-0100</p>
+        <p><a href="tel:+12705550100" style="color:inherit;text-decoration:none;">(270) 555-0100</a></p>
       </div>
     </div>
   </div>
@@ -558,7 +582,7 @@
       <div class="rsvp-left">
         <div class="eyebrow">RSVP</div>
         <h2>Reserve your spot</h2>
-        <p>Sign up below to attend the Grand Opening and claim your complimentary integrated Face + Mind + Body assessment. Limited to the first 25 patients who RSVP.</p>
+        <p>Sign up below to attend the Grand Opening. Every attendee receives a raffle ticket — book a consultation at the event for a second entry and a chance at even bigger prizes.</p>
 
         <form onsubmit="handleSubmit(event)">
           <div class="form-row">
@@ -595,13 +619,9 @@
             <label for="message">Anything we should know? (optional)</label>
             <textarea id="message" name="message" placeholder="Questions, concerns, or special requests..."></textarea>
           </div>
-          <button type="submit" class="form-submit">Claim my complimentary assessment</button>
+          <button type="submit" class="form-submit">RSVP for Grand Opening</button>
         </form>
 
-        <div class="spots-counter">
-          <div class="dot"></div>
-          <p>Spots are limited — only <strong>25 complimentary assessments</strong> available</p>
-        </div>
       </div>
 
       <div class="rsvp-right">
@@ -615,20 +635,20 @@
           <div class="contact-info-item">
             <i class="fa-solid fa-phone"></i>
             <div>
-              <p><strong>Phone</strong>(270) 555-0100</p>
+              <p><strong>Phone</strong><a href="tel:+12705550100" style="color:inherit;text-decoration:none;">(270) 555-0100</a></p>
             </div>
           </div>
           <div class="contact-info-item">
             <i class="fa-solid fa-envelope"></i>
             <div>
-              <p><strong>Email</strong>info@anufacemindbody.com</p>
+              <p><strong>Email</strong><a href="mailto:info@anufacemindbody.com" style="color:inherit;text-decoration:none;">info@anufacemindbody.com</a></p>
             </div>
           </div>
         </div>
 
         <div class="map-wrap">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d-85.8590!3d37.6938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886849f48a2b5e8d%3A0x1234567890abcdef!2s230+Buford+Ln+Suite+106%2C+Elizabethtown%2C+KY+42701!5e0!3m2!1sen!2sus!4v1711234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d-85.8590!3d37.6938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886849f48a2b5e8d%3A0x1234567890abcdef!2s230+Buford+Ln+Suite+108%2C+Elizabethtown%2C+KY+42701!5e0!3m2!1sen!2sus!4v1711234567890"
             allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             title="ANU Face Mind Body Location">
           </iframe>
@@ -643,7 +663,7 @@
   <div class="container">
     <div class="eyebrow">Limited Time</div>
     <h2>The clock is ticking</h2>
-    <p>The complimentary integrated assessment is available exclusively to the first 25 patients who RSVP before our Grand Opening on April 21. Once spots are claimed, this offer is gone.</p>
+    <p>RSVP now to secure your spot at the Grand Opening raffle. Attend for one ticket, book a consultation for a second — prizes include RF Microneedling, Exomind sessions, free IVs, and service credits.</p>
 
     <div class="countdown" id="countdown">
       <div class="countdown-item"><span class="num" id="cd-days">--</span><span class="label">Days</span></div>
@@ -655,7 +675,7 @@
     <div class="urgency-btns">
       <a href="#rsvp" class="btn-urgency">Claim your spot now</a>
     </div>
-    <p class="urgency-note">Offer valid only until April 21 or until all 25 spots are claimed — whichever comes first.</p>
+    <p class="urgency-note">Raffle drawing takes place at the Grand Opening on April 21 — you must be present to win.</p>
   </div>
 </section>
 
