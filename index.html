@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANU Face · Mind · Body | Grand Opening | Elizabethtown, KY</title>
+  <meta name="description" content="Join us for the Grand Opening of ANU Face Mind Body in Elizabethtown, KY on Thursday, July 16. RSVP to attend and enter our raffle. Prizes include RF Microneedling, Exomind sessions, free IVs, and service credits.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary-dark: #392E26;
+      --white: #FFFFFF;
+      --warm-sand: #E3D9CE;
+      --warm-taupe: #B7A693;
+      --cream: #F5F1ED;
+      --sage-green: #B7BDAD;
+      --medium-brown: #6A5C4C;
+      --dark-espresso: #695C4E;
+      --muted-brown: rgba(57,46,38,0.75);
+      --divider: #D9D0C7;
+      --btn-radius: 8px;
+      --card-radius: 16px;
+      --img-radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--primary-dark);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── UTILITY ── */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 500; letter-spacing: 1.3px;
+      text-transform: uppercase; color: var(--muted-brown); margin-bottom: 16px;
+    }
+    .eyebrow::before {
+      content: ''; display: block; width: 8px; height: 8px;
+      border-radius: 4px; background: var(--warm-taupe);
+    }
+    .btn-primary {
+      display: inline-block; background: var(--primary-dark); color: var(--white);
+      font-family: 'Poppins', system-ui, sans-serif; font-weight: 500; font-size: 16px;
+      padding: 14px 32px; border-radius: var(--btn-radius); border: 1px solid var(--primary-dark);
+      text-decoration: none; cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.25s;
+    }
+    .btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(57,46,38,0.45), 0 4px 16px rgba(57,46,38,0.25); }
+    .btn-hero {
+      display: inline-block; background: var(--white); color: var(--primary-dark);
+      font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; font-size: 17px;
+      padding: 16px 40px; border-radius: var(--btn-radius); border: none;
+      text-decoration: none; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.25s;
+    }
+    .btn-hero:hover { background: var(--warm-sand); transform: scale(1.06); box-shadow: 0 0 28px rgba(255,255,255,0.5), 0 8px 24px rgba(0,0,0,0.25); }
+    .btn-outline {
+      display: inline-block; background: transparent; color: var(--primary-dark);
+      font-family: 'Poppins', system-ui, sans-serif; font-weight: 500; font-size: 16px;
+      padding: 14px 32px; border-radius: var(--btn-radius); border: 1px solid var(--primary-dark);
+      text-decoration: none; cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.25s, color 0.25s;
+    }
+    .btn-outline:hover { background: var(--primary-dark); color: var(--white); transform: scale(1.05); box-shadow: 0 0 20px rgba(57,46,38,0.35), 0 4px 16px rgba(57,46,38,0.2); }
+
+    h1 { font-weight: 400; font-size: clamp(40px, 6vw, 70px); line-height: 1.1; }
+    h2 { font-weight: 400; font-size: clamp(32px, 4vw, 50px); line-height: 1.1; }
+    h3 { font-weight: 600; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.4; }
+
+    /* ── NAVIGATION ── */
+    .nav {
+      position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+      width: calc(100% - 48px); max-width: 1140px; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
+      border-radius: 16px; padding: 14px 28px;
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 12px; text-decoration: none;
+    }
+    .nav-brand img { height: 32px; width: auto; }
+    .nav-brand span {
+      font-size: 18px; font-weight: 400; color: var(--primary-dark);
+      letter-spacing: 0.5px; white-space: nowrap;
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 15px; font-weight: 500; color: var(--primary-dark);
+      text-decoration: none; position: relative; transition: color 0.2s;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0;
+      background: var(--warm-taupe); transition: width 0.25s ease;
+    }
+    .nav-links a:hover { color: var(--medium-brown); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: var(--primary-dark); color: var(--white);
+      font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; font-size: 15px;
+      padding: 10px 22px; border-radius: 10px; border: none; text-decoration: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;
+    }
+    .nav-cta:hover { transform: scale(1.05); box-shadow: 0 0 18px rgba(57,46,38,0.4), 0 4px 16px rgba(57,46,38,0.2); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; display: flex; align-items: center;
+      min-height: 100vh;            /* fallback */
+      min-height: 100svh;           /* always full screen, accounts for mobile browser UI */
+      background: url('images/hero.jpg') center/cover no-repeat;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(100deg, rgba(57,46,38,0.92) 0%, rgba(57,46,38,0.78) 40%, rgba(57,46,38,0.28) 70%, rgba(57,46,38,0.05) 100%);
+    }
+    .hero-grid {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px);
+      align-items: center;
+      width: 100%; padding: clamp(120px, 16vh, 150px) 0 clamp(60px, 9vh, 90px);
+    }
+    .hero-content { grid-column: 1; }
+    .hero h1 { color: var(--white); margin-bottom: 20px; font-size: clamp(34px, 3.6vw, 48px); }
+    .hero p { color: rgba(255,255,255,0.88); font-size: 18px; line-height: 1.6; margin-bottom: 32px; }
+    .hero .eyebrow { color: rgba(255,255,255,0.7); }
+    .hero .eyebrow::before { background: var(--warm-taupe); }
+    .hero-badges { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.18); border-radius: 40px;
+      padding: 8px 18px; color: rgba(255,255,255,0.9); font-size: 14px; font-weight: 500;
+    }
+
+    /* ── OFFER / RAFFLE ── */
+    .offer {
+      background: linear-gradient(180deg, var(--cream) 0%, var(--warm-sand) 100%);
+      padding: clamp(56px, 9vh, 100px) 0;
+    }
+    .offer-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+    .offer-header .eyebrow { justify-content: center; }
+    .offer-header h2 { margin-bottom: 16px; }
+    .offer-header p { color: var(--muted-brown); font-size: 17px; line-height: 1.7; }
+
+    /* How to enter — two steps */
+    .enter-steps {
+      display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px;
+      align-items: stretch; max-width: 760px; margin: 0 auto 48px;
+    }
+    .enter-step {
+      background: var(--white); border-radius: var(--card-radius);
+      padding: 28px 26px; text-align: center;
+      box-shadow: 0 6px 24px rgba(57,46,38,0.08);
+      border: 1px solid rgba(57,46,38,0.05); cursor: default;
+      transition: background 0.55s ease, box-shadow 0.55s ease, transform 0.55s ease, border-color 0.55s ease;
+    }
+    .enter-step .step-icon {
+      width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center; font-size: 22px;
+      background: var(--cream); color: var(--medium-brown);
+      transition: background 0.55s ease, color 0.55s ease;
+    }
+    .enter-step strong { display: block; font-size: 18px; margin-bottom: 6px; transition: color 0.55s ease; }
+    .enter-step span { color: var(--muted-brown); font-size: 14px; transition: color 0.55s ease; }
+    .enter-step .ticket-tag {
+      display: inline-block; margin-top: 14px; padding: 5px 14px; border-radius: 40px;
+      background: var(--sage-green); color: var(--primary-dark);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.3px;
+      transition: background 0.55s ease, color 0.55s ease;
+    }
+    /* Slow color inversion on hover */
+    .enter-step:hover {
+      background: var(--primary-dark); border-color: var(--primary-dark);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(57,46,38,0.28);
+    }
+    .enter-step:hover .step-icon { background: rgba(255,255,255,0.15); color: var(--white); }
+    .enter-step:hover strong { color: var(--white); }
+    .enter-step:hover span { color: rgba(255,255,255,0.8); }
+    .enter-step:hover .ticket-tag { background: var(--warm-sand); color: var(--primary-dark); }
+    .enter-plus {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; color: var(--warm-taupe); font-weight: 600;
+    }
+
+    /* Grand prize banner */
+    .grand-prize {
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--medium-brown) 100%);
+      color: var(--white); border-radius: 20px; padding: 40px 44px; margin-bottom: 28px;
+      box-shadow: 0 16px 40px rgba(57,46,38,0.25);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    /* Golden glow for the grand (1st) prize */
+    .grand-prize:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 48px rgba(57,46,38,0.3), 0 0 34px rgba(212,175,80,0.6), 0 0 70px rgba(212,175,80,0.3);
+    }
+    /* Shared shine sweep */
+    .grand-prize::after, .prize-card::after {
+      content: ''; position: absolute; top: 0; left: -90%; width: 55%; height: 100%;
+      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%);
+      transform: skewX(-22deg); pointer-events: none;
+      transition: left 0.75s ease;
+    }
+    /* Golden shine for the 1st prize */
+    .grand-prize::after {
+      background: linear-gradient(120deg, transparent 0%, rgba(243,217,139,0.75) 45%, rgba(212,175,55,0.55) 60%, transparent 100%);
+    }
+    .grand-prize:hover::after, .prize-card:hover::after { left: 140%; }
+    .grand-prize .gp-medal {
+      width: 84px; height: 84px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 36px;
+      background: radial-gradient(circle at 32% 28%, #5b4d3e, #2c231c);
+      border: 1px solid rgba(233,198,107,0.5);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25), inset 0 0 12px rgba(233,198,107,0.25);
+    }
+    /* Golden trophy icon for the 1st prize */
+    .grand-prize .gp-medal i::before {
+      background: linear-gradient(135deg, #f3d98b 0%, #d4af37 50%, #b8860b 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: #d4af37;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+    }
+    .grand-prize .gp-text { flex: 1; min-width: 220px; }
+    .grand-prize .gp-label {
+      font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase;
+      color: var(--warm-sand); margin-bottom: 8px;
+    }
+    .grand-prize h3 { font-size: 24px; color: var(--white); margin-bottom: 6px; }
+    .grand-prize p { color: rgba(255,255,255,0.85); font-size: 15px; }
+
+    /* Prize grid */
+    .prize-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 36px;
+    }
+    .prize-card {
+      position: relative; overflow: hidden;
+      background: var(--white); border-radius: var(--card-radius); padding: 30px 26px;
+      text-align: center; border: 1px solid rgba(57,46,38,0.05);
+      box-shadow: 0 6px 24px rgba(57,46,38,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    /* Silver glow for secondary prizes */
+    .prize-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(57,46,38,0.12), 0 0 28px rgba(190,194,205,0.85), 0 0 58px rgba(190,194,205,0.45);
+    }
+    .prize-card::after {
+      background: linear-gradient(120deg, transparent 0%, rgba(150,160,175,0.28) 50%, transparent 100%);
+    }
+    /* Silver icons for secondary prizes */
+    .prize-card i {
+      width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center; font-size: 20px;
+      background: radial-gradient(circle at 32% 28%, #fdfdfe, #c2c7d0);
+      border: 1px solid rgba(150,160,175,0.35);
+      box-shadow: inset 0 0 8px rgba(120,130,145,0.18);
+    }
+    .prize-card i::before {
+      background: linear-gradient(135deg, #e9ebef 0%, #aab0ba 50%, #7d828c 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: #8a8f99;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.18));
+    }
+    .prize-card strong { display: block; font-size: 17px; margin-bottom: 6px; }
+    .prize-card p { color: var(--muted-brown); font-size: 14px; line-height: 1.5; }
+
+    /* Event-day bonus */
+    .offer-bonus {
+      display: flex; align-items: flex-start; gap: 18px;
+      background: var(--white); border-left: 4px solid var(--sage-green);
+      border-radius: 14px; padding: 26px 28px; margin-bottom: 36px;
+      box-shadow: 0 6px 24px rgba(57,46,38,0.06);
+    }
+    .offer-bonus i { font-size: 22px; color: var(--sage-green); margin-top: 2px; }
+    .offer-bonus strong { display: block; font-size: 17px; margin-bottom: 6px; }
+    .offer-bonus p { color: var(--muted-brown); font-size: 15px; line-height: 1.6; margin: 0; }
+    .offer-cta { text-align: center; }
+    .offer-cta .urgency-note, .offer-cta p { color: var(--muted-brown); font-size: 14px; margin-top: 14px; }
+
+    /* ── EVENT DETAILS ── */
+    .event {
+      position: relative; padding: clamp(56px, 9vh, 100px) 0;
+      background: url('images/interior.jpg') center/cover no-repeat fixed;
+    }
+    .event::before {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(0,0,0,0.35);
+    }
+    .event .container { position: relative; z-index: 2; }
+    .event .eyebrow { color: rgba(255,255,255,0.7); }
+    .event .eyebrow::before { background: var(--warm-taupe); }
+    .event h2 { color: var(--white); }
+    .event-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+      margin-top: 48px;
+    }
+    .event-card {
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2); border-radius: var(--card-radius); padding: 36px 28px;
+      text-align: center; transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .event-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.18);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .event-card i {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(255,255,255,0.2); color: var(--white);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 22px; margin-bottom: 20px;
+    }
+    .event-card h3 { font-size: 18px; margin-bottom: 8px; color: var(--white); }
+    .event-card p { color: rgba(255,255,255,0.85); font-size: 15px; line-height: 1.5; }
+
+    /* ── SERVICES ── */
+    .services { background: var(--warm-sand); padding: clamp(56px, 9vh, 100px) 0; }
+    .services-header { text-align: center; margin-bottom: 56px; }
+    .services-header p { color: var(--muted-brown); max-width: 600px; margin: 16px auto 0; font-size: 17px; }
+    .services-booking-note {
+      display: inline-flex; align-items: center; gap: 12px; text-align: left;
+      max-width: 680px; margin: 24px auto 0; padding: 16px 24px;
+      background: var(--white); border-radius: 40px;
+      border: 1px solid rgba(57,46,38,0.08); box-shadow: 0 4px 18px rgba(57,46,38,0.06);
+    }
+    .services-booking-note i {
+      flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%;
+      background: var(--primary-dark); color: var(--white);
+      display: flex; align-items: center; justify-content: center; font-size: 15px;
+    }
+    .services-booking-note span { font-size: 15px; font-weight: 500; color: var(--primary-dark); line-height: 1.45; }
+    .services-category { margin-bottom: 48px; }
+    .services-category:last-child { margin-bottom: 0; }
+    .category-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 22px; font-weight: 600; margin-bottom: 24px; color: var(--primary-dark);
+    }
+    .category-label i {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--primary-dark); color: var(--white);
+      display: inline-flex; align-items: center; justify-content: center; font-size: 16px;
+    }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;
+    }
+    .service-card {
+      background: var(--white); border-radius: var(--card-radius); overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s; cursor: default;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(57,46,38,0.12);
+    }
+    .service-card-img {
+      width: 100%; height: 180px; object-fit: cover; display: block;
+    }
+    .service-card-body {
+      padding: 18px 20px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .service-card-body h4 {
+      font-weight: 600; font-size: 15px; color: var(--primary-dark); line-height: 1.3;
+      position: relative; display: inline-block;
+    }
+    .service-card-body h4::after {
+      content: ''; position: absolute; left: 0; bottom: -3px; height: 2px; width: 0;
+      background: var(--warm-taupe); transition: width 0.3s ease;
+    }
+    .service-card:hover .service-card-body h4::after { width: 100%; }
+    .service-card-body span {
+      font-size: 16px; color: var(--warm-taupe); flex-shrink: 0; margin-left: 8px;
+    }
+    .services-divider {
+      height: 1px; background: var(--divider); margin: 0 0 48px;
+    }
+
+    /* ── RSVP FORM ── */
+    .rsvp { background: var(--white); padding: clamp(56px, 9vh, 100px) 0; }
+    .rsvp-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end;
+    }
+    .rsvp-left h2 { margin-bottom: 16px; }
+    .rsvp-left > p { color: var(--muted-brown); margin-bottom: 32px; line-height: 1.7; }
+    .rsvp-left form {
+      background: var(--cream); border: 1px solid var(--divider);
+      border-radius: var(--card-radius); padding: 36px;
+      box-shadow: 0 8px 30px rgba(57,46,38,0.08);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { display: flex; flex-direction: column; margin-bottom: 16px; }
+    .form-group label {
+      font-size: 14px; font-weight: 500; margin-bottom: 6px; color: var(--primary-dark);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: 'Poppins', system-ui, sans-serif; font-size: 15px;
+      padding: 14px 16px; border-radius: var(--btn-radius);
+      border: 1px solid var(--divider); background: var(--white);
+      color: var(--primary-dark); outline: none; transition: border-color 0.25s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--warm-taupe); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%; padding: 16px; background: var(--primary-dark); color: var(--white);
+      font-family: 'Poppins', system-ui, sans-serif; font-weight: 500; font-size: 16px;
+      border: none; border-radius: var(--btn-radius); cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.25s;
+    }
+    .form-submit:hover { transform: scale(1.03); box-shadow: 0 0 20px rgba(57,46,38,0.4), 0 4px 16px rgba(57,46,38,0.2); }
+    .spots-counter {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--cream); border-radius: var(--card-radius); padding: 20px 24px;
+      margin-top: 24px;
+    }
+    .spots-counter .dot {
+      width: 12px; height: 12px; border-radius: 50%; background: #c0392b;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .spots-counter p { font-size: 14px; font-weight: 500; color: var(--primary-dark); margin: 0; }
+
+    .rsvp-right { padding-top: 16px; }
+    .contact-info { margin-bottom: 32px; }
+    .contact-info-item {
+      display: flex; align-items: flex-start; gap: 16px; margin-bottom: 20px;
+    }
+    .contact-info-item i {
+      width: 44px; height: 44px; border-radius: 50%; background: var(--cream);
+      color: var(--primary-dark); display: flex; align-items: center; justify-content: center;
+      font-size: 16px; flex-shrink: 0;
+    }
+    .contact-info-item p { font-size: 15px; line-height: 1.5; }
+    .contact-info-item strong { font-weight: 600; display: block; margin-bottom: 2px; }
+
+    /* ── MAP ── */
+    .map-wrap {
+      border-radius: var(--card-radius); overflow: hidden;
+      box-shadow: 0 4px 24px rgba(57,46,38,0.08);
+    }
+    .map-wrap iframe { display: block; width: 100%; height: 280px; border: 0; }
+
+    /* ── URGENCY FOOTER ── */
+    .urgency {
+      position: relative;
+      background: url('images/anu-emface.jpg') center/cover no-repeat fixed;
+      padding: clamp(48px, 7.5vh, 80px) 0; text-align: center; color: var(--white);
+    }
+    .urgency::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(57,46,38,0.78), rgba(57,46,38,0.55));
+    }
+    .urgency .container { position: relative; z-index: 2; }
+    .urgency .eyebrow { color: rgba(255,255,255,0.6); }
+    .urgency .eyebrow::before { background: var(--warm-taupe); }
+    .urgency h2 { color: var(--white); margin-bottom: 16px; }
+    .urgency > .container > p { color: rgba(255,255,255,0.8); max-width: 640px; margin: 0 auto 36px; font-size: 17px; line-height: 1.7; }
+    .countdown {
+      display: flex; justify-content: center; gap: 24px; margin-bottom: 40px;
+    }
+    .countdown-item {
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--card-radius); padding: 20px 28px; min-width: 100px;
+    }
+    .countdown-item .num { font-size: 36px; font-weight: 600; display: block; line-height: 1; }
+    .countdown-item .label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.6); margin-top: 6px; display: block; }
+    .urgency-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+    .btn-urgency {
+      display: inline-block; background: var(--warm-sand); color: var(--primary-dark);
+      font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; font-size: 16px;
+      padding: 16px 36px; border-radius: var(--btn-radius); text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.25s;
+    }
+    .btn-urgency:hover { background: var(--cream); transform: scale(1.06); box-shadow: 0 0 24px rgba(227,217,206,0.5), 0 8px 24px rgba(0,0,0,0.2); }
+    .urgency-note {
+      font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 12px;
+    }
+
+    /* ── SITE FOOTER ── */
+    .site-footer {
+      background: var(--primary-dark); padding: 40px 0; text-align: center;
+    }
+    .site-footer p { color: rgba(255,255,255,0.5); font-size: 13px; }
+    .site-footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    .footer-logo { margin-bottom: 8px; }
+    .footer-logo img { height: 36px; width: auto; }
+
+    /* ── RESPONSIVE ── */
+    /* Tablet / small laptop */
+    @media (max-width: 900px) {
+      .offer-grid, .rsvp-grid { grid-template-columns: 1fr; gap: 40px; align-items: stretch; }
+      .event-grid { grid-template-columns: 1fr 1fr; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-content { grid-column: 1; max-width: 720px; }
+      /* Fixed backgrounds break on most mobile browsers (especially iOS) */
+      .event, .urgency { background-attachment: scroll; }
+      .services-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+      .prize-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 0 20px; }
+      body { font-size: 15px; }
+
+      /* Navigation: keep it slim and prevent overflow */
+      .nav {
+        top: 12px; width: calc(100% - 24px);
+        padding: 10px 16px; border-radius: 12px;
+      }
+      .nav-links { display: none; }
+      .nav-brand { gap: 8px; min-width: 0; flex: 1; }
+      .nav-brand img { height: 26px; }
+      .nav-brand span { font-size: 14px; letter-spacing: 0.3px; overflow: hidden; text-overflow: ellipsis; }
+      .nav-cta { padding: 9px 16px; font-size: 13px; border-radius: 8px; flex-shrink: 0; }
+
+      /* Hero — stays full screen height */
+      .hero p { font-size: 16px; }
+      .btn-hero { padding: 14px 28px; font-size: 16px; width: 100%; max-width: 360px; text-align: center; }
+      .hero-badges { gap: 8px; }
+      .hero-badge { padding: 7px 14px; font-size: 13px; }
+
+      /* Offer */
+      .offer-header { margin-bottom: 36px; }
+      .enter-steps { grid-template-columns: 1fr; gap: 12px; }
+      .enter-plus { padding: 4px 0; }
+      .grand-prize { padding: 28px 24px; gap: 18px; }
+      .prize-grid { grid-template-columns: 1fr; }
+      .offer-bonus { padding: 22px 20px; }
+      .offer-cta .btn-primary { width: 100%; max-width: 360px; text-align: center; }
+
+      /* Event */
+      .event-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 32px; }
+      .event-card { padding: 28px 20px; }
+
+      /* Services */
+      .services-header { margin-bottom: 40px; }
+      .services-header p { font-size: 15px; }
+      .services-booking-note { border-radius: 16px; padding: 14px 16px; gap: 10px; }
+      .services-booking-note span { font-size: 13px; }
+      .services-grid {
+        grid-template-columns: 1fr 1fr; gap: 14px;
+      }
+      .service-card-img { height: 140px; }
+      .service-card-body { padding: 14px 14px; }
+      .service-card-body h4 { font-size: 13px; }
+      .category-label { font-size: 18px; margin-bottom: 20px; }
+      .category-label i { width: 34px; height: 34px; font-size: 14px; }
+
+      /* RSVP */
+      .rsvp-grid { gap: 40px; }
+      .rsvp-left form { padding: 24px 20px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .form-group input,
+      .form-group select,
+      .form-group textarea { font-size: 16px; padding: 13px 14px; }
+      .map-wrap iframe { height: 240px; }
+
+      /* Urgency */
+      .countdown { gap: 8px; flex-wrap: wrap; }
+      .countdown-item { padding: 14px 12px; min-width: 64px; flex: 1 0 calc(25% - 8px); }
+      .countdown-item .num { font-size: 26px; }
+      .countdown-item .label { font-size: 10px; letter-spacing: 0.8px; }
+      .btn-urgency { padding: 14px 28px; font-size: 15px; width: 100%; max-width: 360px; text-align: center; }
+    }
+
+    @media (max-width: 380px) {
+      .nav-brand span { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .countdown-item { flex: 1 0 calc(50% - 6px); }
+    }
+
+    /* ── TOUCH DEVICES: turn hover effects into tap (click) effects ── */
+    @media (hover: none), (pointer: coarse) {
+      /* Grand prize — golden glow + shine on tap */
+      .grand-prize.tapped {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 48px rgba(57,46,38,0.3), 0 0 34px rgba(212,175,80,0.6), 0 0 70px rgba(212,175,80,0.3);
+      }
+      .grand-prize.tapped::after { left: 140%; }
+
+      /* Prize cards — silver glow + shine on tap */
+      .prize-card.tapped {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(57,46,38,0.12), 0 0 28px rgba(190,194,205,0.85), 0 0 58px rgba(190,194,205,0.45);
+      }
+      .prize-card.tapped::after { left: 140%; }
+
+      /* Entry steps — slow colour inversion on tap */
+      .enter-step.tapped {
+        background: var(--primary-dark); border-color: var(--primary-dark);
+        transform: translateY(-4px); box-shadow: 0 14px 36px rgba(57,46,38,0.28);
+      }
+      .enter-step.tapped .step-icon { background: rgba(255,255,255,0.15); color: var(--white); }
+      .enter-step.tapped strong { color: var(--white); }
+      .enter-step.tapped span { color: rgba(255,255,255,0.8); }
+      .enter-step.tapped .ticket-tag { background: var(--warm-sand); color: var(--primary-dark); }
+
+      /* Service cards — underline on tap */
+      .service-card.tapped .service-card-body h4::after { width: 100%; }
+
+      /* Event cards — lift on tap */
+      .event-card.tapped {
+        transform: translateY(-4px);
+        background: rgba(255,255,255,0.18);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ────── NAVIGATION ────── -->
+<nav class="nav">
+  <a href="#hero" class="nav-brand"><img src="images/anu-logo.png" alt="ANU Logo"><span>Face · Mind · Body</span></a>
+  <div class="nav-links">
+    <a href="#offer">Raffle</a>
+    <a href="#event">Event Details</a>
+    <a href="#services">Services</a>
+    <a href="#rsvp">RSVP</a>
+  </div>
+  <a href="#rsvp" class="nav-cta">RSVP Now</a>
+</nav>
+
+<!-- ────── HERO ────── -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="eyebrow">Grand Opening Event</div>
+        <h1>Grand Opening, Grand Rewards.<br>ANU Is Celebrating With You.</h1>
+        <p>Join us on Thursday, July 16 for the Grand Opening of ANU Face · Mind · Body in Elizabethtown. Every attendee is entered into our raffle for a chance to win RF Microneedling, Exomind sessions, free IVs, and service credits, just for showing up.</p>
+        <a href="#rsvp" class="btn-hero">Reserve your spot</a>
+        <div class="hero-badges">
+          <div class="hero-badge"><i class="fa-solid fa-calendar"></i> July 16</div>
+          <div class="hero-badge"><i class="fa-solid fa-clock"></i> 4:00 PM</div>
+          <div class="hero-badge"><i class="fa-solid fa-gift"></i> Raffle prizes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────── OFFER ────── -->
+<section class="offer" id="offer">
+  <div class="container">
+    <div class="offer-header">
+      <div class="eyebrow">Grand Opening Raffle</div>
+      <h2>Attend. Enter. Win.</h2>
+      <p>Every guest at the July 16 Grand Opening is entered to win, just for showing up. Book a consultation at the event to double your chances.</p>
+    </div>
+
+    <div class="enter-steps">
+      <div class="enter-step">
+        <div class="step-icon"><i class="fa-solid fa-ticket"></i></div>
+        <strong>Show up</strong>
+        <span>Attend the Grand Opening and you're automatically entered.</span>
+        <div class="ticket-tag">1 Ticket</div>
+      </div>
+      <div class="enter-plus">+</div>
+      <div class="enter-step">
+        <div class="step-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <strong>Book a consult</strong>
+        <span>Book a consultation on the day for a bonus entry.</span>
+        <div class="ticket-tag">2nd Ticket</div>
+      </div>
+    </div>
+
+    <div class="grand-prize">
+      <div class="gp-medal"><i class="fa-solid fa-trophy"></i></div>
+      <div class="gp-text">
+        <div class="gp-label">Grand Prize</div>
+        <h3>RF Microneedling or Exomind package</h3>
+        <p>Winner's choice of an RF Microneedling package (3 sessions) or Exomind (6 sessions).</p>
+      </div>
+    </div>
+
+    <div class="prize-grid">
+      <div class="prize-card">
+        <i class="fa-solid fa-syringe"></i>
+        <strong>Two Free IVs</strong>
+        <p>Two winners each receive a complimentary IV of their choice.</p>
+      </div>
+      <div class="prize-card">
+        <i class="fa-solid fa-gift"></i>
+        <strong>Service Credits</strong>
+        <p>Two $150 credits to put toward any ANU service.</p>
+      </div>
+      <div class="prize-card">
+        <i class="fa-solid fa-star"></i>
+        <strong>And more</strong>
+        <p>Additional surprises and giveaways throughout the evening.</p>
+      </div>
+    </div>
+
+    <div class="offer-bonus">
+      <i class="fa-solid fa-circle-check"></i>
+      <div>
+        <strong>Event-Day Bonus</strong>
+        <p>Book a treatment plan at the event and your $150 consultation fee is applied toward treatment, plus a $50 Botox credit added to your account.</p>
+      </div>
+    </div>
+
+    <div class="offer-cta">
+      <a href="#rsvp" class="btn-primary">RSVP Now</a>
+      <p class="urgency-note">Drawing held at the Grand Opening on July 16. Must be present to win.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ────── EVENT DETAILS ────── -->
+<section class="event" id="event">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:16px;">
+      <div class="eyebrow">Event Details</div>
+      <h2>Save the date: Thursday, July 16</h2>
+      <p style="color:rgba(255,255,255,0.85); max-width:600px; margin:16px auto 0; font-size:17px;">Mark your calendar for the evening of Thursday, July 16, 2026. Doors open at 4:00 PM, here is everything you need to join us.</p>
+    </div>
+    <div class="event-grid">
+      <div class="event-card">
+        <i class="fa-solid fa-calendar-day"></i>
+        <h3>Date</h3>
+        <p>Thursday, July 16, 2026</p>
+      </div>
+      <div class="event-card">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Time</h3>
+        <p>4:00 PM</p>
+      </div>
+      <div class="event-card">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Address</h3>
+        <p>230 Buford Ln, Suite 108<br>Elizabethtown, KY 42701</p>
+      </div>
+      <div class="event-card">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Phone</h3>
+        <p><a href="tel:+12705550100" style="color:inherit;text-decoration:none;">(270) 555-0100</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────── SERVICES ────── -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="eyebrow">Our Services</div>
+      <h2>Integrative Medicine & Aesthetics</h2>
+      <p>ANU brings advanced aesthetic treatments and holistic wellness services together under one roof, organized around three pillars of care.</p>
+      <div class="services-booking-note">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>All services below are available to book during the Grand Opening on July 16, booking on the day earns you a second raffle ticket.</span>
+      </div>
+    </div>
+
+    <!-- Face -->
+    <div class="services-category">
+      <div class="category-label">
+        <i class="fa-solid fa-spa"></i> Face
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="images/hair_restoration_hero.jpg" alt="Hair Restoration" class="service-card-img">
+          <div class="service-card-body"><h4>Hair Restoration with DE|RIVE</h4><span>&rarr;</span></div>
+        </div>
+        <div class="service-card">
+          <img src="images/neurotoxins.jpg" alt="Neurotoxins" class="service-card-img">
+          <div class="service-card-body"><h4>Neurotoxins</h4><span>&rarr;</span></div>
+        </div>
+        <div class="service-card">
+          <img src="images/rf_microneedling.jpg" alt="RF Microneedling" class="service-card-img">
+          <div class="service-card-body"><h4>RF Microneedling</h4><span>&rarr;</span></div>
+        </div>
+        <div class="service-card">
+          <img src="images/chemical_peels.jpg" alt="Chemical Peels" class="service-card-img">
+          <div class="service-card-body"><h4>Chemical Peels</h4><span>&rarr;</span></div>
+        </div>
+        <div class="service-card">
+          <img src="images/dermal_fillers.jpg" alt="Dermal Fillers" class="service-card-img">
+          <div class="service-card-body"><h4>Dermal Fillers</h4><span>&rarr;</span></div>
+        </div>
+        <div class="service-card">
+          <img src="images/woman_doing_her_selfcare.jpg" alt="Environ Skincare" class="service-card-img">
+          <div class="service-card-body"><h4>Environ Medical-Grade Skincare</h4><span>&rarr;</span></div>
+        </div>
+        <div class="service-card">
+          <img src="images/close_up_doctor_checking_smiley_woma.jpg" alt="Sculptra" class="service-card-img">
+          <div class="service-card-body"><h4>Sculptra</h4><span>&rarr;</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-divider"></div>
+
+    <!-- Mind -->
+    <div class="services-category">
+      <div class="category-label">
+        <i class="fa-solid fa-brain"></i> Mind
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="images/concierge_psychiatric_services.jpg" alt="Concierge Psychiatric Services" class="service-card-img">
+          <div class="service-card-body"><h4>Concierge Psychiatric Services</h4><span>&rarr;</span></div>
+        </div>
+        <div class="service-card">
+          <img src="images/exomind.jpg" alt="Exomind TMS Therapy" class="service-card-img">
+          <div class="service-card-body"><h4>Exomind TMS Therapy</h4><span>&rarr;</span></div>
+        </div>
+        <div class="service-card">
+          <img src="images/therapy_services.jpg" alt="Mental Performance Coaching" class="service-card-img">
+          <div class="service-card-body"><h4>Mental Performance Coaching</h4><span>&rarr;</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-divider"></div>
+
+    <!-- Body -->
+    <div class="services-category">
+      <div class="category-label">
+        <i class="fa-solid fa-heart-pulse"></i> Body
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="images/hormone.jpg" alt="Hormone Replacement Therapy" class="service-card-img">
+          <div class="service-card-body"><h4>Bioidentical Hormone Replacement Therapy</h4><span>&rarr;</span></div>
+        </div>
+        <div class="service-card">
+          <img src="images/iv_therapy.jpg" alt="IV Therapy" class="service-card-img">
+          <div class="service-card-body"><h4>IV Therapy</h4><span>&rarr;</span></div>
+        </div>
+        <div class="service-card">
+          <img src="images/weight_loss.jpg" alt="Medical Weight Loss" class="service-card-img">
+          <div class="service-card-body"><h4>Medical Weight Loss</h4><span>&rarr;</span></div>
+        </div>
+        <div class="service-card">
+          <img src="images/peptide.jpg" alt="Peptide Therapy" class="service-card-img">
+          <div class="service-card-body"><h4>Peptide Therapy</h4><span>&rarr;</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────── RSVP + MAP ────── -->
+<section class="rsvp" id="rsvp">
+  <div class="container">
+    <div class="rsvp-grid">
+      <div class="rsvp-left">
+        <div class="eyebrow">RSVP</div>
+        <h2>Reserve your spot</h2>
+        <p>Sign up below to attend the Grand Opening. Every attendee receives a raffle ticket. Book a consultation at the event for a second entry and a chance at even bigger prizes.</p>
+
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First name</label>
+              <input type="text" id="fname" name="fname" placeholder="Jane" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last name</label>
+              <input type="text" id="lname" name="lname" placeholder="Doe" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(270) 000-0000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="interest">Primary interest</label>
+            <select id="interest" name="interest">
+              <option value="" disabled selected>Select a pillar</option>
+              <option value="face">Face: Aesthetics</option>
+              <option value="mind">Mind: Mental Wellness</option>
+              <option value="body">Body: Optimization</option>
+              <option value="all">All three: Integrated Assessment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Anything we should know? (optional)</label>
+            <textarea id="message" name="message" placeholder="Questions, concerns, or special requests..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">RSVP for Grand Opening</button>
+        </form>
+
+      </div>
+
+      <div class="rsvp-right">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <p><strong>Address</strong>230 Buford Ln, Suite 108<br>Elizabethtown, KY 42701</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <p><strong>Phone</strong><a href="tel:+12705550100" style="color:inherit;text-decoration:none;">(270) 555-0100</a></p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <p><strong>Email</strong><a href="mailto:info@anufacemindbody.com" style="color:inherit;text-decoration:none;">info@anufacemindbody.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d-85.8590!3d37.6938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886849f48a2b5e8d%3A0x1234567890abcdef!2s230+Buford+Ln+Suite+106%2C+Elizabethtown%2C+KY+42701!5e0!3m2!1sen!2sus!4v1711234567890"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="ANU Face Mind Body Location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────── URGENCY FOOTER ────── -->
+<section class="urgency" id="urgency">
+  <div class="container">
+    <div class="eyebrow">Limited Time</div>
+    <h2>The clock is ticking</h2>
+    <p>RSVP now to secure your spot at the Grand Opening raffle. Attend for one ticket, book a consultation for a second. Prizes include RF Microneedling, Exomind sessions, free IVs, and service credits.</p>
+
+    <div class="countdown" id="countdown">
+      <div class="countdown-item"><span class="num" id="cd-days">--</span><span class="label">Days</span></div>
+      <div class="countdown-item"><span class="num" id="cd-hours">--</span><span class="label">Hours</span></div>
+      <div class="countdown-item"><span class="num" id="cd-mins">--</span><span class="label">Minutes</span></div>
+      <div class="countdown-item"><span class="num" id="cd-secs">--</span><span class="label">Seconds</span></div>
+    </div>
+
+    <div class="urgency-btns">
+      <a href="#rsvp" class="btn-urgency">Claim your spot now</a>
+    </div>
+    <p class="urgency-note">Raffle drawing takes place at the Grand Opening on July 16. You must be present to win.</p>
+  </div>
+</section>
+
+<!-- ────── SITE FOOTER ────── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-logo"><img src="images/anu-logo-w.png" alt="ANU"></div>
+    <p>Face | Mind | Body</p>
+    <p style="margin-top:12px;">&copy; 2026 ANU Face Mind Body. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Countdown to July 16 at 4:00 PM Eastern
+  (function() {
+    // Target: July 16, 2026, 4:00 PM EDT (UTC-4)
+    var target = new Date('2026-07-16T20:00:00Z').getTime();
+    // If that date has passed, use next year
+    if (Date.now() > target) {
+      target = new Date('2027-07-16T20:00:00Z').getTime();
+    }
+
+    var daysEl = document.getElementById('cd-days');
+    var hoursEl = document.getElementById('cd-hours');
+    var minsEl = document.getElementById('cd-mins');
+    var secsEl = document.getElementById('cd-secs');
+
+    function pad(n) { return n < 10 ? '0' + n : String(n); }
+
+    function tick() {
+      var now = Date.now();
+      var diff = target - now;
+      if (diff <= 0) {
+        daysEl.textContent = '0';
+        hoursEl.textContent = '00';
+        minsEl.textContent = '00';
+        secsEl.textContent = '00';
+        return;
+      }
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      daysEl.textContent = String(d);
+      hoursEl.textContent = pad(h);
+      minsEl.textContent = pad(m);
+      secsEl.textContent = pad(s);
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+  // Form handler (placeholder)
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = 'You\'re on the list!';
+    btn.style.background = '#6A5C4C';
+    btn.disabled = true;
+    e.target.style.opacity = '0.7';
+  }
+
+  // On touch devices, turn card hover effects into tap (click) effects
+  (function() {
+    var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches
+      || ('ontouchstart' in window);
+    if (!isTouch) return;
+
+    var cards = document.querySelectorAll(
+      '.grand-prize, .prize-card, .enter-step, .service-card, .event-card'
+    );
+
+    cards.forEach(function(card) {
+      card.addEventListener('click', function() {
+        var wasActive = card.classList.contains('tapped');
+        // Clear other active cards so only one is highlighted at a time
+        cards.forEach(function(c) { c.classList.remove('tapped'); });
+        // Re-trigger the shine sweep by forcing a reflow
+        void card.offsetWidth;
+        if (!wasActive) card.classList.add('tapped');
+      });
+    });
+
+    // Tapping elsewhere clears the active state
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.grand-prize, .prize-card, .enter-step, .service-card, .event-card')) {
+        cards.forEach(function(c) { c.classList.remove('tapped'); });
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
